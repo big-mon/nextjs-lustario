@@ -1,6 +1,7 @@
 import "tailwindcss/tailwind.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import GlobalHeader from "components/organisms/GlobalHeader";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -9,9 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
-      <header>aa</header>
 
-      <Component {...pageProps} />
+      <GlobalHeader />
+      <div>
+        <Component {...pageProps} />
+      </div>
       <footer>bbb</footer>
     </>
   );
