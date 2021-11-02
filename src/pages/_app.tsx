@@ -2,6 +2,7 @@ import "tailwindcss/tailwind.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import GlobalHeader from "components/organisms/GlobalHeader";
+import GlobalFooter from "components/organisms/GlobalFooter";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div>
         <Component {...pageProps} />
       </div>
-      <footer>bbb</footer>
+      <GlobalFooter />
     </>
   );
 }

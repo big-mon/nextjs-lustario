@@ -8,7 +8,6 @@ module.exports = {
     fontFamily: {
       body: [
         "'Noto Serif JP'",
-        "sans-serif",
         "system-ui",
         "-apple-system",
         "Segoe UI",
