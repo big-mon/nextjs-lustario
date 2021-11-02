@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <GlobalHeader />
-      <div>
+      <div className="container mx-auto p-4">
         <Component {...pageProps} />
       </div>
       <GlobalFooter />
