@@ -1,4 +1,4 @@
-export const SocialIconTwitter = () => {
+const SocialIconTwitter = () => {
   return (
     <>
       <svg

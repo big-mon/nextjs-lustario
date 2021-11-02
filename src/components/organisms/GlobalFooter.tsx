@@ -5,7 +5,7 @@ import CustomLink from "components/atoms/CustomLink";
 import { TWITTER, GITHUB } from "lib/constants";
 
 /** 全体フッター */
-export const GlobalFooter = () => {
+const GlobalFooter = () => {
   return (
     <>
       <footer className="container mx-auto px-8 pt-16 pb-8">

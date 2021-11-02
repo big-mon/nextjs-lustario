@@ -1,6 +1,6 @@
 import MenuItem from "./MenuItem";
 
-export const SiteMenus = () => {
+const SiteMenus = () => {
   return (
     <>
       <ul className="flex ml-auto">

@@ -1,4 +1,4 @@
-export const SocialIconGitHub = () => {
+const SocialIconGitHub = () => {
   return (
     <>
       <svg

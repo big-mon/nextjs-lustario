@@ -1,7 +1,7 @@
 import CustomLink from "components/atoms/CustomLink";
 import { SITE_NAME } from "lib/constants";
 
-export const CopyRight = () => {
+const CopyRight = () => {
   return (
     <>
       <p className="text-sm sm:py-2 sm:mt-0 mt-4">

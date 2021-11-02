@@ -5,7 +5,7 @@ type Props = {
   href: string;
 };
 
-export const MenuItem = ({ text, href }: Props) => {
+const MenuItem = ({ text, href }: Props) => {
   return (
     <>
       <li className="px-4">

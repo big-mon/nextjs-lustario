@@ -5,7 +5,7 @@ type Props = {
 };
 
 /** サイトタイトル */
-export const TitleLabel = ({ children }: Props) => {
+const TitleLabel = ({ children }: Props) => {
   return (
     <>
       <span className="ml-2 text-xl">{children}</span>
