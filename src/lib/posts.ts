@@ -43,7 +43,7 @@ const extractPostMeta = (matter: { [key: string]: any }): PostMeta => {
       : new Date().toISOString(),
     author: matter.author ?? "",
     coverImage: matter.image ?? "",
-    category: "",
+    category: matter.category,
     tags: [],
   };
 };
