@@ -9,7 +9,7 @@ const GlobalFooter = () => {
   return (
     <>
       <footer className="container mx-auto px-8 pt-16 pb-8">
-        <div className="flex items-center sm:flex-row flex-col text-gray-500">
+        <div className="flex sm:flex-row flex-col text-gray-500">
           <CopyRight />
 
           <div className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
