@@ -2,10 +2,10 @@
 title: Lustarioへようこそ
 description: Next.js向けブログテンプレートの紹介
 slug: about
-date: 2021-11-03
+date: 2021-12-31
 author: Mon
-image: sample1.jpg
-category:
+image: sample12.jpg
+category: Other
 tags: []
 ---
 
