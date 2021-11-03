@@ -12,14 +12,14 @@ type Props = {
 /** 記事カード */
 const ArticleCard = ({ data }: Props) => {
   return (
-    <article className="mx-auto mb-16 bg-white relative flex items-stretch even:flex-row-reverse shadow-xl hover:shadow-2xl transition duration-500">
-      <div className="relative w-45/100 py-6 px-8">
+    <article className="mx-auto mb-16 bg-white relative flex content-between items-stretch even:flex-row-reverse shadow-xl group hover:shadow-2xl transition duration-500">
+      <div className="relative flex-grow w-auto pt-8 pb-6 px-8">
         <ArticleCategory>{data.category}</ArticleCategory>
         <ArticleTitle>{data.title}</ArticleTitle>
         <ArticleDescription>{data.description}</ArticleDescription>
         <ArticleDate date={data.date} />
       </div>
-      <div className="relative w-55/100">
+      <div className="relative flex-shrink-0 w-55/100 overflow-hidden">
         <ArticleCoverImage src={data.coverImage} alt={data.title} />
       </div>
     </article>

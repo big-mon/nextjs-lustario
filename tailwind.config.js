@@ -21,13 +21,13 @@ module.exports = {
     },
     extend: {
       width: {
-        "45/100": "45%",
         "55/100": "55%",
       },
     },
   },
   variants: {
     flexDirection: ["even"],
+    scale: ["group-hover"],
     extend: {},
   },
   plugins: [],
