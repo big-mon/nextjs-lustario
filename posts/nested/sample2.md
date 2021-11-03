@@ -5,7 +5,7 @@ slug: sample2
 date: 2021-10-02
 author: Mon
 image: sample2.jpg
-category: sample2
+category: sample
 tags: []
 ---
 
