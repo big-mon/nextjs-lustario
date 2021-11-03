@@ -22,7 +22,7 @@ const Pagination = ({ total, current, category, tag }: Props) => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto text-right px-6">
+    <div className="text-right">
       {hasPrev ? (
         <PageButton src={`/${baseHref}/${Number(current) - 1}`} text={"<"} />
       ) : (
