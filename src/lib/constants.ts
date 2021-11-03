@@ -25,4 +25,4 @@ export const GITHUB: string = "big-mon";
 export const AMAZON_AFFILIATE: string = "d6l0g03-22";
 
 /** list articles per page */
-export const PER_PAGE: number = 12;
+export const PER_PAGE: number = 6;
