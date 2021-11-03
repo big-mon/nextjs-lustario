@@ -19,9 +19,15 @@ module.exports = {
         "Segoe UI Emoji",
       ],
     },
-    extend: {},
+    extend: {
+      width: {
+        "45/100": "45%",
+        "55/100": "55%",
+      },
+    },
   },
   variants: {
+    flexDirection: ["even"],
     extend: {},
   },
   plugins: [],

@@ -1,4 +1,5 @@
 import { PostMeta } from "models/Post";
+import ArticleCard from "components/organisms/ArticleCard";
 
 type Props = {
   posts: PostMeta[];
@@ -8,9 +9,13 @@ type Props = {
 const Index = ({ posts }: Props) => {
   return (
     <>
-      {posts.map((post) => (
-        <div key={post.slug}>{post.title}</div>
-      ))}
+      <main className="max-w-4xl mx-auto">
+        {posts.map((post) => (
+          <>
+            <ArticleCard key={post.slug} data={post} />
+          </>
+        ))}
+      </main>
     </>
   );
 };

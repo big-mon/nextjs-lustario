@@ -8,18 +8,18 @@ const postsDirectory = path.join(process.cwd(), "posts");
 
 /** 日付でソートした全記事データを取得 */
 export const getSortedPostsMeta = () => {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  // 記事データを取得
+  const files = retrieveFiles(postsDirectory);
+  let allPostsData: PostMeta[] = [];
+  files.forEach((fullPath) => {
     // Markdownファイルを文字列として取得
-    const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // metaデータをパース
     const { data: matterResult } = matter(fileContents);
 
     // データ整形し返却
-    return extractPostMeta(matterResult);
+    allPostsData.push(extractPostMeta(matterResult));
   });
 
   // 日付でソート
@@ -31,6 +31,16 @@ export const getSortedPostsMeta = () => {
     }
   });
 };
+
+/** 指定ディレクトリ内のファイルパスを再帰的に取得 */
+const retrieveFiles = (dir: string): string[] =>
+  fs
+    .readdirSync(dir, { withFileTypes: true })
+    .flatMap((entry) =>
+      entry.isFile()
+        ? [`${dir}/${entry.name}`]
+        : retrieveFiles(`${dir}/${entry.name}`)
+    );
 
 /** meta情報から必要なデータのみ抽出 */
 const extractPostMeta = (matter: { [key: string]: any }): PostMeta => {
