@@ -39,7 +39,7 @@ export const getPostDataBySlug = async (slug: string): Promise<PostData> => {
     .map((matterResult) => {
       const meta = extractPostMeta(matterResult.data);
 
-      if (meta.slug != slug) return;
+      if (meta.slug != slug.toLowerCase()) return;
       const content = matterResult.content + "";
 
       return { content: content, ...meta };
@@ -83,7 +83,7 @@ const retrieveFiles = (dir: string): string[] =>
 /** meta情報から必要なデータのみ抽出 */
 const extractPostMeta = (matter: { [key: string]: any }): PostMeta => {
   return {
-    slug: matter.slug ?? "",
+    slug: (matter.slug ?? "").toLowerCase(),
     title: matter.title ?? "Error",
     description: matter.description ?? "error occurred",
     date: matter.date
