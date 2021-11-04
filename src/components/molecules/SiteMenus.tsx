@@ -5,7 +5,7 @@ const SiteMenus = () => {
     <>
       <ul className="flex ml-auto">
         <MenuItem text="Home" href="/" />
-        <MenuItem text="About" href="/about" />
+        <MenuItem text="About" href="/post/about" />
         <MenuItem
           text="Project"
           href="https://github.com/big-mon/nextjs-lustario"
