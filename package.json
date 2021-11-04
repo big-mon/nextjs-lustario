@@ -12,16 +12,23 @@
     "gray-matter": "4.x",
     "next": "12.x",
     "react": "17.x",
-    "react-dom": "17.x"
+    "react-dom": "17.x",
+    "rehype-highlight": "5.0.x",
+    "rehype-stringify": "9.0.x",
+    "remark-gfm": "3.0.x",
+    "remark-parse": "10.0.x",
+    "remark-rehype": "10.0.x",
+    "remark-unwrap-images": "3.0.x",
+    "unified": "10.1.x"
   },
   "devDependencies": {
-    "@types/node": "16.11.6",
-    "@types/react": "17.0.33",
+    "@types/node": "16.11.x",
+    "@types/react": "17.0.x",
     "autoprefixer": "^10.4.0",
     "eslint": "7",
-    "eslint-config-next": "12.0.2",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.19",
-    "typescript": "4.4.4"
+    "eslint-config-next": "12.0.x",
+    "postcss": "8.3.x",
+    "tailwindcss": "2.2.x",
+    "typescript": "4.4.x"
   }
 }
