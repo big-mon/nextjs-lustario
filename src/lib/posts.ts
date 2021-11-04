@@ -1,7 +1,7 @@
+import type { PostMeta } from "models/Post";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { PostMeta } from "models/Post";
 
 /** 記事データ格納パス */
 const postsDirectory = path.join(process.cwd(), "posts");

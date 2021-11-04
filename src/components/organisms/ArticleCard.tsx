@@ -1,4 +1,4 @@
-import { PostMeta } from "models/Post";
+import type { PostMeta } from "models/Post";
 import ArticleCategory from "components/molecules/ArticleCategory";
 import ArticleTitle from "components/molecules/ArticleTitle";
 import ArticleDescription from "components/molecules/ArticleDescription";

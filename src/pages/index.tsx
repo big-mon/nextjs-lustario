@@ -1,7 +1,7 @@
 import type { GetStaticProps } from "next";
+import type { PostMeta } from "models/Post";
 import { getSortedPostsMeta } from "lib/posts";
 import { PER_PAGE } from "lib/constants";
-import { PostMeta } from "models/Post";
 import Template from "components/template/Index";
 
 type Props = {
