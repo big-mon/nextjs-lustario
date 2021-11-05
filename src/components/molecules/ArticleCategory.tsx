@@ -6,9 +6,9 @@ type Props = {
 
 const ArticleCategory = ({ children }: Props) => {
   return (
-    <p className="text-sm opacity-80 mb-4" itemProp="keywords">
+    <span className="text-sm opacity-80" itemProp="keywords">
       {children}
-    </p>
+    </span>
   );
 };
 

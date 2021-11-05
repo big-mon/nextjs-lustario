@@ -8,7 +8,7 @@ type Props = {
 
 const ArticleTitle = ({ slug, children }: Props) => {
   return (
-    <h1 className="text-xl font-semibold mb-4" itemProp="headline name">
+    <h1 className="text-xl font-semibold my-4" itemProp="headline name">
       <CustomLink href={`/post/${slug}`}>{children}</CustomLink>
     </h1>
   );
