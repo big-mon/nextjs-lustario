@@ -6,7 +6,7 @@ type Props = {
 
 const ArticleDate = ({ date }: Props) => {
   return (
-    <span className="text-xs text-gray-500">
+    <span className="text-xs opacity-80">
       <Date dateString={date} />
     </span>
   );
