@@ -2,40 +2,130 @@
   letter-spacing: 0.05rem;
   word-break: break-word;
 
+  a {
+    color: rgba(185, 28, 28, var(--tw-text-opacity));
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  p,
+  img,
+  table,
+  ul,
+  ol,
+  blockquote,
+  pre,
+  hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 2em auto 1em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 2em auto 1em;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 1.8em auto 0.6em;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
 
     th {
       text-align: center;
-      background: var(--color-grey85);
+      background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
     }
 
     th,
     td {
-      border: 1px solid lightgray;
+      border: 1px solid rgba(156, 163, 175, var(--tw-bg-opacity));
       padding: 0.4em 0.6em;
     }
 
     tr:nth-child(even) td {
-      background-color: #f2f2f2;
+      background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  table,
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
   ul,
-  ol,
-  img,
-  pre,
-  hr,
-  p {
-    margin-top: 2em;
-    margin-bottom: 2em;
+  ol {
+    list-style-position: inside;
+    margin-left: 1rem;
+
+    li {
+      margin-bottom: 1em;
+    }
+
+    ul,
+    ol {
+      margin-top: 1em;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    font-style: italic;
+    padding: 1rem 1rem 2rem 2rem;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+
+    p:first-of-type {
+      margin-top: 0;
+
+      &:before {
+        position: absolute;
+        left: 1rem;
+        content: "\201c";
+      }
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+
+      &:after {
+        position: absolute;
+        content: "\201d";
+      }
+    }
+  }
+
+  hr {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border: 1px solid lightgray;
+  }
+
+  figure {
+    > div {
+      position: unset !important;
+    }
+
+    img {
+      position: relative !important;
+      height: unset !important;
+      max-height: 556px !important;
+    }
   }
 }
