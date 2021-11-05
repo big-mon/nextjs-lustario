@@ -12,7 +12,7 @@ type Props = {
 const Index = ({ posts, total, current }: Props) => {
   return (
     <>
-      <main className="max-w-4xl mx-auto">
+      <main className="max-w-4xl mx-auto py-6">
         {posts.map((post) => (
           <>
             <ArticleCard key={post.slug} data={post} />
