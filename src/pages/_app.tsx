@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import GlobalHeader from "components/organisms/GlobalHeader";
 import GlobalFooter from "components/organisms/GlobalFooter";
+import "highlight.js/styles/github-dark.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

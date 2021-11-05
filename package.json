@@ -19,6 +19,7 @@
     "remark-parse": "10.0.x",
     "remark-rehype": "10.0.x",
     "remark-unwrap-images": "3.0.x",
+    "sass": "1.43.x",
     "unified": "10.1.x"
   },
   "devDependencies": {

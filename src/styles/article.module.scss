@@ -1,0 +1,41 @@
+.article {
+  letter-spacing: 0.05rem;
+  word-break: break-word;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: center;
+      background: var(--color-grey85);
+    }
+
+    th,
+    td {
+      border: 1px solid lightgray;
+      padding: 0.4em 0.6em;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f2f2f2;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  table,
+  ul,
+  ol,
+  img,
+  pre,
+  hr,
+  p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}

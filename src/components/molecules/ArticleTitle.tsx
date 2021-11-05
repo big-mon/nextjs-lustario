@@ -11,7 +11,7 @@ const ArticleTitle = ({ slug, isLarge, children }: Props) => {
   return (
     <>
       {isLarge ? (
-        <h1 className="text-4xl font-semibold my-4" itemProp="headline name">
+        <h1 className="text-4xl my-4" itemProp="headline name">
           <CustomLink href={`/post/${slug}`}>{children}</CustomLink>
         </h1>
       ) : (

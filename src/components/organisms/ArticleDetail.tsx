@@ -1,5 +1,6 @@
 import type { PostData } from "models/Post";
 import ArticleHeader from "components/molecules/ArticleHeader";
+import ArticleBody from "components/molecules/ArticleBody";
 
 type Props = {
   data: PostData;
@@ -10,8 +11,7 @@ const ArticleDetail = ({ data }: Props) => {
   return (
     <>
       <ArticleHeader data={data.meta} />
-
-      <div className="" dangerouslySetInnerHTML={{ __html: data.content }} />
+      <ArticleBody content={data.content} />
     </>
   );
 };
