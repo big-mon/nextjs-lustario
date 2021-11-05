@@ -62,17 +62,20 @@ Lustario は Next.js 向けに作成されたブログテンプレートです�
 | ----------- | :---------- | ----------: | :---------: |
 | sample text | sample text | sample text | sample text |
 | a           | b           |           c |      d      |
+| a           | b           |           c |      d      |
 ```
 
 | th          | th          |          th |     th      |
 | ----------- | :---------- | ----------: | :---------: |
 | sample text | sample text | sample text | sample text |
 | a           | b           |           c |      d      |
+| a           | b           |           c |      d      |
 
 # リスト
 
 ```md
 - item
+  - item
   - item
   1. item
 
@@ -81,6 +84,7 @@ Lustario は Next.js 向けに作成されたブログテンプレートです�
 ```
 
 - item
+  - item
   - item
   1. item
 
@@ -151,6 +155,8 @@ let x = "sample text";
   <li>item</li>
 </ul>
 
+自身の記述した Markdown のみを読み込むことを前提としているため、Markdown を HTML に変換する際のサニタイズ処理を行っていません。必要に応じてサニタイズ処理を追加してください。
+
 # 区切り線
 
 ```md
@@ -158,3 +164,5 @@ let x = "sample text";
 ```
 
 ---
+
+以上です。
