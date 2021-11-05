@@ -3,14 +3,23 @@ import CustomLink from "components/atoms/CustomLink";
 
 type Props = {
   slug: string;
+  isLarge: boolean;
   children: ReactNode;
 };
 
-const ArticleTitle = ({ slug, children }: Props) => {
+const ArticleTitle = ({ slug, isLarge, children }: Props) => {
   return (
-    <h1 className="text-xl font-semibold my-4" itemProp="headline name">
-      <CustomLink href={`/post/${slug}`}>{children}</CustomLink>
-    </h1>
+    <>
+      {isLarge ? (
+        <h1 className="text-4xl font-semibold my-4" itemProp="headline name">
+          <CustomLink href={`/post/${slug}`}>{children}</CustomLink>
+        </h1>
+      ) : (
+        <h1 className="text-xl font-semibold my-4" itemProp="headline name">
+          <CustomLink href={`/post/${slug}`}>{children}</CustomLink>
+        </h1>
+      )}
+    </>
   );
 };
 

@@ -15,7 +15,9 @@ const ArticleCard = ({ data }: Props) => {
     <article className="mx-auto mb-16 bg-white relative flex content-between items-stretch even:flex-row-reverse shadow-xl group hover:shadow-2xl transition duration-500">
       <div className="relative flex-grow w-auto pt-8 pb-6 px-8">
         <ArticleCategory>{data.category}</ArticleCategory>
-        <ArticleTitle slug={data.slug}>{data.title}</ArticleTitle>
+        <ArticleTitle slug={data.slug} isLarge={false}>
+          {data.title}
+        </ArticleTitle>
         <ArticleDescription>{data.description}</ArticleDescription>
         <ArticleDate date={data.date} />
       </div>

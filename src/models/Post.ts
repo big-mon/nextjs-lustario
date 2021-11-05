@@ -11,6 +11,7 @@ export type PostMeta = {
 };
 
 /** 本文含む記事データ */
-export type PostData = PostMeta & {
+export type PostData = {
+  meta: PostMeta;
   content: string;
 };

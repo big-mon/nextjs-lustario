@@ -23,6 +23,12 @@ module.exports = {
       width: {
         "55/100": "55%",
       },
+      height: {
+        104: "32rem",
+      },
+      margin: {
+        screen: "calc(50% - 50vw)",
+      },
     },
   },
   variants: {

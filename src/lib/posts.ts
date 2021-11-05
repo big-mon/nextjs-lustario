@@ -42,12 +42,12 @@ export const getPostDataBySlug = async (slug: string): Promise<PostData> => {
       if (meta.slug != slug.toLowerCase()) return;
       const content = matterResult.content + "";
 
-      return { content: content, ...meta };
+      return { meta: meta, content: content };
     })
     .filter((data) => data);
 
   if (target.length < 1 || target[0] === undefined)
-    return { ...extractPostMeta({}), content: "" };
+    return { meta: extractPostMeta({}), content: "" };
 
   target[0].content = await markdownToHtml(target[0].content);
   return target[0];

@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostData } from "models/Post";
 import { getAllPostSlugs, getPostDataBySlug } from "lib/posts";
+import Template from "components/template/Post";
 
 type Props = {
   postData: PostData;
@@ -8,11 +9,7 @@ type Props = {
 
 /** ページ本体 */
 const Page = ({ postData }: Props) => {
-  return (
-    <>
-      {postData.slug} | {postData.title}
-    </>
-  );
+  return <Template post={postData} />;
 };
 
 /** 動的なルーティング対象の一覧を定義 */
