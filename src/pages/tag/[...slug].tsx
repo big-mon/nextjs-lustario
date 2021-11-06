@@ -18,7 +18,7 @@ const Page = ({ posts, total, current, tag }: Props) => {
       posts={posts}
       total={total}
       current={current}
-      mode={`tags/${tag}`}
+      mode={`tag/${tag}`}
     />
   );
 };

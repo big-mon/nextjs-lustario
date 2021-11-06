@@ -18,7 +18,7 @@ const Page = ({ posts, total, current, category }: Props) => {
       posts={posts}
       total={total}
       current={current}
-      mode={`categories/${category}`}
+      mode={`category/${category}`}
     />
   );
 };
