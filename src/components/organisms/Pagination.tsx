@@ -13,17 +13,15 @@ const Pagination = ({ total, current, mode = "page" }: Props) => {
   const hasPrev = current - 1 > 0;
   const hasNext = totalPage - current > 0;
 
-  let baseHref = mode;
-
   return (
     <div className="text-right">
       {hasPrev ? (
-        <PageButton src={`/${baseHref}/${Number(current) - 1}`} text={"<"} />
+        <PageButton src={`/${mode}/${Number(current) - 1}`} text={"<"} />
       ) : (
         <></>
       )}
       {hasNext ? (
-        <PageButton src={`/${baseHref}/${Number(current) + 1}`} text={">"} />
+        <PageButton src={`/${mode}/${Number(current) + 1}`} text={">"} />
       ) : (
         <></>
       )}
