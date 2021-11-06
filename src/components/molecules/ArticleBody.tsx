@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
+import CustomLink from "components/atoms/CustomLink";
 
 type Props = {
   content: string;
@@ -27,6 +28,7 @@ const ArticleBody = ({ content }: Props) => {
             h3: "h4",
             h4: "h5",
             h5: "h6",
+            a: CustomLink,
           }}
         >
           {content}

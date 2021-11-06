@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 type Props = {
-  href: string;
-  children: React.ReactNode;
+  href?: string;
+  children?: React.ReactNode;
   className?: string;
 };
 
 /** 内部/外部リンクの種類に応じてコンポーネントを読み替え */
-const CustomLink = ({ href, children, className = "" }: Props) => {
+const CustomLink = ({ href = "/", children = "", className = "" }: Props) => {
   const isInternal = href && href.startsWith("/");
   const isAnchor = href && href.startsWith("#");
 
