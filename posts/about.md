@@ -96,11 +96,11 @@ Lustario は Next.js 向けに作成されたブログテンプレートです�
 ```md
 [リンクテキスト](https://example.com/)
 [この書き方もできます][1]
+
 [1]: https://example.com/
 ```
 
 [リンクテキスト](https://example.com/)
-
 [この書き方もできます][1]
 
 [1]: https://example.com/
@@ -155,7 +155,7 @@ let x = "sample text";
   <li>item</li>
 </ul>
 
-自身の記述した Markdown のみを読み込むことを前提としているため、Markdown を HTML に変換する際のサニタイズ処理を行っていません。必要に応じてサニタイズ処理を追加してください。
+自身の記述した Markdown のみを読み込むことを前提としているため、Markdown を HTML に変換する際のサニタイズ処理を行っていません。Markdown の作者を信用していない場合はサニタイズ処理を追加してください。
 
 # 区切り線
 
