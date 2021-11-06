@@ -4,22 +4,16 @@ import PageButton from "components/molecules/PageButton";
 type Props = {
   total: number;
   current: number;
-  category?: string;
-  tag?: string;
+  mode?: string;
 };
 
 /** ページネーション */
-const Pagination = ({ total, current, category, tag }: Props) => {
+const Pagination = ({ total, current, mode = "page" }: Props) => {
   const totalPage = Math.ceil(total / PER_PAGE);
   const hasPrev = current - 1 > 0;
   const hasNext = totalPage - current > 0;
 
-  let baseHref = "page";
-  if (category) {
-    baseHref = `categories/${category}`;
-  } else if (tag) {
-    baseHref = `tags/${tag}`;
-  }
+  let baseHref = mode;
 
   return (
     <div className="text-right">

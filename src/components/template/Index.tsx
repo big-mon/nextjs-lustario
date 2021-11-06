@@ -6,10 +6,11 @@ type Props = {
   posts: PostMeta[];
   total: number;
   current: number;
+  mode: string;
 };
 
 /** 記事一覧ページ用テンプレート */
-const Index = ({ posts, total, current }: Props) => {
+const Index = ({ posts, total, current, mode }: Props) => {
   return (
     <>
       <main className="max-w-4xl mx-auto py-6">
@@ -19,7 +20,7 @@ const Index = ({ posts, total, current }: Props) => {
           </>
         ))}
 
-        <Pagination total={total} current={current} />
+        <Pagination total={total} current={current} mode={mode} />
       </main>
     </>
   );

@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import CustomLink from "components/atoms/CustomLink";
 
 type Props = {
   children: ReactNode;
@@ -7,7 +8,9 @@ type Props = {
 const ArticleCategory = ({ children }: Props) => {
   return (
     <span className="text-sm opacity-80" itemProp="keywords">
-      {children}
+      <CustomLink href={`/categories/${children?.toString().toLowerCase()}/1`}>
+        {children}
+      </CustomLink>
     </span>
   );
 };
