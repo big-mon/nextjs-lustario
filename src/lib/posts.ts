@@ -90,6 +90,6 @@ const extractPostMeta = (matter: { [key: string]: any }): PostMeta => {
     author: matter.author ?? "",
     coverImage: matter.image ?? "",
     category: matter.category ?? "",
-    tags: [],
+    tags: matter.tags ?? [],
   };
 };
