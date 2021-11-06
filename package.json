@@ -13,15 +13,12 @@
     "next": "12.x",
     "react": "17.x",
     "react-dom": "17.x",
+    "react-markdown": "^7.1.x",
     "rehype-highlight": "5.0.x",
-    "rehype-stringify": "9.0.x",
+    "rehype-raw": "6.1.x",
     "remark-breaks": "3.0.x",
     "remark-gfm": "3.0.x",
-    "remark-parse": "10.0.x",
-    "remark-rehype": "10.0.x",
-    "remark-unwrap-images": "3.0.x",
-    "sass": "1.43.x",
-    "unified": "10.1.x"
+    "sass": "1.43.x"
   },
   "devDependencies": {
     "@types/node": "16.11.x",

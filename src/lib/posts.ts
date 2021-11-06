@@ -2,7 +2,6 @@ import type { PostMeta, PostData } from "models/Post";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import markdownToHtml from "lib/markdownToHTML";
 
 /** 記事データ格納パス */
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -49,7 +48,6 @@ export const getPostDataBySlug = async (slug: string): Promise<PostData> => {
   if (target.length < 1 || target[0] === undefined)
     return { meta: extractPostMeta({}), content: "" };
 
-  target[0].content = await markdownToHtml(target[0].content);
   return target[0];
 };
 
