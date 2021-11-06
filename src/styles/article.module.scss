@@ -118,7 +118,7 @@
   }
 
   figure {
-    > div {
+    > span {
       position: unset !important;
     }
 
@@ -126,6 +126,10 @@
       position: relative !important;
       height: unset !important;
       max-height: 556px !important;
+    }
+
+    + br {
+      display: none;
     }
   }
 }
