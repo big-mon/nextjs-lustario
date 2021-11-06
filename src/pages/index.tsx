@@ -11,7 +11,7 @@ type Props = {
 
 /** ページ本体 */
 const Page = ({ posts, total }: Props) => {
-  return <Template posts={posts} total={total} current={1} />;
+  return <Template posts={posts} total={total} current={1} mode={"page"} />;
 };
 
 /** ビルド時のみの静的ページ生成 */
