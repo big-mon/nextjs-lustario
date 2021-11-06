@@ -5,7 +5,11 @@ import SiteMenus from "components/molecules/SiteMenus";
 const GlobalHeader = () => {
   return (
     <>
-      <header className="container mx-auto p-4 flex">
+      <header
+        className="container mx-auto p-4 flex"
+        itemScope
+        itemType="https://schema.org/WPHeader"
+      >
         <SiteTitle />
         <SiteMenus />
       </header>

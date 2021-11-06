@@ -10,8 +10,10 @@ type Props = {
 const ArticleDetail = ({ data }: Props) => {
   return (
     <>
-      <ArticleHeader data={data.meta} />
-      <ArticleBody content={data.content} />
+      <article itemProp="mainEntityOfPage">
+        <ArticleHeader data={data.meta} />
+        <ArticleBody content={data.content} />
+      </article>
     </>
   );
 };
