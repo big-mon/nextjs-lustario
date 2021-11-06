@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Button from "components/atoms/Button";
+import CustomLink from "components/atoms/CustomLink";
 
 type Props = {
   src: string;
@@ -9,9 +9,7 @@ type Props = {
 const PageButton = ({ src, text }: Props) => {
   return (
     <Button>
-      <Link href={src}>
-        <a>{text}</a>
-      </Link>
+      <CustomLink href={src}>{text}</CustomLink>
     </Button>
   );
 };
