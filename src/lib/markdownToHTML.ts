@@ -2,6 +2,7 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkUnwrapImages from "remark-unwrap-images";
+import remarkBreaks from "remark-breaks";
 import remarkRehype from "remark-rehype";
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
@@ -12,9 +13,10 @@ const markdownToHtml = async (markdown: string) => {
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkUnwrapImages)
-    .use(remarkRehype)
+    .use(remarkBreaks)
+    .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeHighlight, { ignoreMissing: true })
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(markdown);
   return result.toString();
 };

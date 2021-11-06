@@ -15,6 +15,7 @@
     "react-dom": "17.x",
     "rehype-highlight": "5.0.x",
     "rehype-stringify": "9.0.x",
+    "remark-breaks": "3.0.x",
     "remark-gfm": "3.0.x",
     "remark-parse": "10.0.x",
     "remark-rehype": "10.0.x",
