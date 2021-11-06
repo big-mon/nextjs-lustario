@@ -13,9 +13,9 @@ const Index = ({ posts, total, current }: Props) => {
   return (
     <>
       <main className="max-w-4xl mx-auto py-6">
-        {posts.map((post) => (
+        {posts.map((post, i) => (
           <>
-            <ArticleCard key={post.slug} data={post} />
+            <ArticleCard key={i + post.slug} data={post} />
           </>
         ))}
 
