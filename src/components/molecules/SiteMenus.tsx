@@ -3,7 +3,7 @@ import MenuItem from "./MenuItem";
 const SiteMenus = () => {
   return (
     <>
-      <ul className="flex ml-auto">
+      <ul className="ml-auto hidden md:flex">
         <MenuItem text="Home" href="/" />
         <MenuItem text="About" href="/post/about" />
         <MenuItem

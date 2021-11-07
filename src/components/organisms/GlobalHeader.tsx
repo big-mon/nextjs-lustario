@@ -6,7 +6,7 @@ const GlobalHeader = () => {
   return (
     <>
       <header
-        className="container mx-auto p-4 flex"
+        className="container mx-auto mb-2 p-4 flex"
         itemScope
         itemType="https://schema.org/WPHeader"
       >

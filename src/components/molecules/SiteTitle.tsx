@@ -7,9 +7,9 @@ import Link from "next/link";
 const SiteTitle = () => {
   return (
     <>
-      <div className="inline-block">
+      <div className="mx-0">
         <Link href="/">
-          <a className="flex font-medium content-center mb-4 md:mb-0">
+          <a className="flex font-medium content-center">
             <TitleIcon />
             <TitleLabel>{SITE_NAME}</TitleLabel>
           </a>

@@ -6,7 +6,10 @@ type Props = {
 
 const ArticleDescription = ({ children }: Props) => {
   return (
-    <p className="text-base mb-6 h-28 overflow-hidden" itemProp="description">
+    <p
+      className="text-base mb-6 h-24 hidden md:block overflow-hidden"
+      itemProp="description"
+    >
       {children}
     </p>
   );

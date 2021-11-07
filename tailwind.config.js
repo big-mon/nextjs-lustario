@@ -21,6 +21,7 @@ module.exports = {
     },
     extend: {
       width: {
+        "45/100": "45%",
         "55/100": "55%",
       },
       height: {
@@ -32,7 +33,7 @@ module.exports = {
     },
   },
   variants: {
-    flexDirection: ["even"],
+    flexDirection: ["responsive", "even"],
     scale: ["group-hover"],
     extend: {},
   },
