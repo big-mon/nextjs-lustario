@@ -8,7 +8,7 @@ type Props = {
 const ArticleCategory = ({ children }: Props) => {
   return (
     <span className="text-sm opacity-80" itemProp="keywords">
-      <CustomLink href={`/categories/${children?.toString().toLowerCase()}/1`}>
+      <CustomLink href={`/category/${children?.toString().toLowerCase()}/1`}>
         {children}
       </CustomLink>
     </span>
