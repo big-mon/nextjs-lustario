@@ -30,6 +30,7 @@ const CodeBlock = ({ node, className, children, ...props }: CodeProps) => {
     );
   }
 
+  // 通常のコンポーネントを返却
   return <code className={className}>{children}</code>;
 };
 
