@@ -1,6 +1,7 @@
 import type { PostData } from "models/Post";
 import ArticleHeader from "components/molecules/ArticleHeader";
 import ArticleBody from "components/molecules/ArticleBody";
+import ArticleTags from "components/molecules/ArticleTags";
 
 type Props = {
   data: PostData;
@@ -13,6 +14,7 @@ const ArticleDetail = ({ data }: Props) => {
       <article itemProp="mainEntityOfPage">
         <ArticleHeader data={data.meta} />
         <ArticleBody content={data.content} />
+        <ArticleTags tags={data.meta.tags} />
       </article>
     </>
   );
