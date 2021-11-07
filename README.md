@@ -13,6 +13,8 @@ Next.js 用のブログテンプレートです。
 - typescript
 - YouTube Embed
 - Twitter Embed
+- SEO
+- sitemap
 
 ## 📷 Images Link
 
