@@ -2,6 +2,7 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostData } from "models/Post";
 import { getAllPostSlugs, getPostDataBySlug } from "lib/posts";
 import Template from "components/template/Post";
+import SEO from "components/organisms/SEO";
 
 type Props = {
   postData: PostData;
@@ -9,7 +10,12 @@ type Props = {
 
 /** ページ本体 */
 const Page = ({ postData }: Props) => {
-  return <Template post={postData} />;
+  return (
+    <>
+      <SEO meta={postData.meta} />
+      <Template post={postData} />
+    </>
+  );
 };
 
 /** 動的なルーティング対象の一覧を定義 */

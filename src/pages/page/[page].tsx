@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
 import Template from "components/template/Index";
+import SEO from "components/organisms/SEO";
 import { getSortedPostsMeta } from "lib/posts";
 import { PER_PAGE } from "lib/constants";
 
@@ -13,6 +14,7 @@ type Props = {
 const Page = ({ posts, total, current }: Props) => {
   return (
     <>
+      <SEO />
       <Template posts={posts} total={total} current={current} mode={"page"} />
     </>
   );

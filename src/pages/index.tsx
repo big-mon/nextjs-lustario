@@ -3,6 +3,7 @@ import type { PostMeta } from "models/Post";
 import { getSortedPostsMeta } from "lib/posts";
 import { PER_PAGE } from "lib/constants";
 import Template from "components/template/Index";
+import SEO from "components/organisms/SEO";
 
 type Props = {
   posts: PostMeta[];
@@ -11,7 +12,12 @@ type Props = {
 
 /** ページ本体 */
 const Page = ({ posts, total }: Props) => {
-  return <Template posts={posts} total={total} current={1} mode={"page"} />;
+  return (
+    <>
+      <SEO />
+      <Template posts={posts} total={total} current={1} mode={"page"} />
+    </>
+  );
 };
 
 /** ビルド時のみの静的ページ生成 */

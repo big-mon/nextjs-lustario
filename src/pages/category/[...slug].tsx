@@ -3,6 +3,7 @@ import type { PostMeta } from "models/Post";
 import { getSortedPostsMeta } from "lib/posts";
 import { PER_PAGE } from "lib/constants";
 import Template from "components/template/Index";
+import SEO from "components/organisms/SEO";
 
 type Props = {
   posts: PostMeta[];
@@ -14,12 +15,15 @@ type Props = {
 /** ページ本体 */
 const Page = ({ posts, total, current, category }: Props) => {
   return (
-    <Template
-      posts={posts}
-      total={total}
-      current={current}
-      mode={`category/${category}`}
-    />
+    <>
+      <SEO category={category} />
+      <Template
+        posts={posts}
+        total={total}
+        current={current}
+        mode={`category/${category}`}
+      />
+    </>
   );
 };
 
