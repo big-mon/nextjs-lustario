@@ -30,13 +30,7 @@ const CodeBlock = ({ node, className, children, ...props }: CodeProps) => {
     );
   }
 
-  return (
-    <>
-      <code className={className} inline={true} {...props}>
-        {children}
-      </code>
-    </>
-  );
+  return <code className={className}>{children}</code>;
 };
 
 export default CodeBlock;
