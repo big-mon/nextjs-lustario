@@ -1,4 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# nextjs-lustario
+
+Next.js 用のブログテンプレートです。
+
+[DEMO](https://nextjs-lustario.vercel.app/)
+
+## ✨ Features
+
+- markdown (gfm)
+- category
+- tags
+- responsive design
+- typescript
+- YouTube Embed
+- Twitter Embed
 
 ## 📷 Images Link
 
