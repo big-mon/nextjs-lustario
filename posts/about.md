@@ -141,6 +141,30 @@ let x = "sample text";
 let x = "sample text";
 ```
 
+# YouTube 埋め込み
+
+````md
+```youtube
+bIHPvQmU7JQ
+```
+````
+
+```youtube
+bIHPvQmU7JQ
+```
+
+# Twitter 埋め込み
+
+````md
+```twitter
+1441739144300929030
+```
+````
+
+```twitter
+1441739144300929030
+```
+
 # 直接埋め込まれた HTML
 
 ```md
