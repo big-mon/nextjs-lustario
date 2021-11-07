@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -11,6 +12,7 @@
     "date-fns": "^2.25.0",
     "gray-matter": "4.x",
     "next": "12.x",
+    "nextjs-progressbar": "0.0.x",
     "react": "17.x",
     "react-dom": "17.x",
     "react-markdown": "^7.1.x",
@@ -28,6 +30,7 @@
     "autoprefixer": "^10.4.0",
     "eslint": "7",
     "eslint-config-next": "12.0.x",
+    "next-sitemap": "1.6.x",
     "postcss": "8.3.x",
     "tailwindcss": "2.2.x",
     "typescript": "4.4.x"
