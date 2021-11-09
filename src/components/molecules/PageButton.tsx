@@ -8,9 +8,9 @@ type Props = {
 
 const PageButton = ({ src, text }: Props) => {
   return (
-    <Button>
-      <CustomLink href={src}>{text}</CustomLink>
-    </Button>
+    <CustomLink href={src}>
+      <Button>{text}</Button>
+    </CustomLink>
   );
 };
 
