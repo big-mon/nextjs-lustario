@@ -16,7 +16,9 @@ type Props = {
 };
 
 const SEO = ({ meta, category, tag }: Props) => {
-  const title = meta ? `${meta.title} | ${SITE_NAME}` : SITE_NAME;
+  const title = meta
+    ? `${meta.title} | ${SITE_NAME}`
+    : `${SITE_NAME} | ${SITE_DESCRIPTION}`;
   const description = meta ? meta.description ?? "" : SITE_DESCRIPTION;
   const ogpType = meta ? "website" : "article";
   const image = meta ? meta.coverImage : SITE_IMAGE;
