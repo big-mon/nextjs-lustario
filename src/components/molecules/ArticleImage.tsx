@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 type Props = {
   title?: string;
@@ -9,7 +11,9 @@ type Props = {
 const ArticleImage = ({ title, src = "", alt = "" }: Props) => {
   return (
     <figure className="my-8 relative">
-      <Image src={src} alt={alt} layout="fill" objectFit="contain" />
+      <Zoom zoomMargin={100} overlayBgColorEnd={"rgba(255, 255, 255, 0.85)"}>
+        <Image src={src} alt={alt} layout="fill" objectFit="contain" />
+      </Zoom>
       {title ? (
         <figcaption className="p-2 text-center text-base">{title}</figcaption>
       ) : (

@@ -118,8 +118,12 @@
   }
 
   figure {
-    > span {
-      position: unset !important;
+    > div {
+      display: block;
+
+      > span {
+        position: unset !important;
+      }
     }
 
     img {
