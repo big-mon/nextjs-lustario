@@ -15,9 +15,7 @@ const Index = ({ posts, total, current, mode }: Props) => {
     <>
       <main className="max-w-4xl mx-auto py-0 md:py-6">
         {posts.map((post, i) => (
-          <>
-            <ArticleCard key={i} data={post} />
-          </>
+          <ArticleCard key={i} data={post} />
         ))}
 
         <Pagination total={total} current={current} mode={mode} />
