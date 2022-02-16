@@ -15,7 +15,6 @@ const HeroImage = ({ src, alt }: Props) => {
         alt={alt}
         layout="fill"
         objectFit="cover"
-        quality={50}
         className="pointer-events-none"
       />
     </>

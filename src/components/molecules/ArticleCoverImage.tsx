@@ -19,7 +19,7 @@ const ArticleCoverImage = ({ src, alt, slug }: Props) => {
         alt={alt}
         layout="fill"
         objectFit="cover"
-        quality={50}
+        quality={60}
         itemProp="image"
         className="transform duration-500 group-hover:scale-105"
       />
