@@ -15,7 +15,7 @@ const CodeBlock = ({ node, className, children, ...props }: CodeProps) => {
   if (params.length > 0 && params[0] === "twitter") {
     // Twitter埋め込み
     const id = children.toString().replace(/\r?\n/g, "");
-    return <TweetEmbed id={id} />;
+    return <TweetEmbed tweetId={id} />;
   }
 
   if (params.length > 0 && params[0] === "youtube") {
@@ -24,8 +24,8 @@ const CodeBlock = ({ node, className, children, ...props }: CodeProps) => {
     return (
       <YouTubeEmbed
         videoId={id}
-        className={style.iframe}
-        containerClassName={style.youtube}
+        iframeClassName={style.iframe}
+        className={style.youtube}
       />
     );
   }
