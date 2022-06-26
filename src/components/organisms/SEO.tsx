@@ -47,13 +47,13 @@ const SEO = ({ meta, category, tag }: Props) => {
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:image" content={image} />
 
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta property="twitter:site" content={"@" + TWITTER} />
-      <meta property="twitter:creator" content={OWNER} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:url" content={url} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content={"@" + TWITTER} />
+      <meta name="twitter:creator" content={OWNER} />
 
       <link href={url} rel="canonical" />
       <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
