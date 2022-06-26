@@ -1,6 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-const config = {
+module.exports = {
   siteUrl: process.env.SITE_URL || "https://example.com",
   generateRobotsTxt: true,
 };
-export default config;
