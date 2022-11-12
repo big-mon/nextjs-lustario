@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   images: {
     formats: ["image/avif", "image/webp"],
   },
 };
+module.exports = nextConfig;
