@@ -13,10 +13,12 @@ const CustomLink = ({ href = "/", children = "", className = "" }: Props) => {
 
   if (isInternal) {
     return (
-      <Link href={href}>
-        <a className={`hover:text-red-700 ${className}`} itemProp="url">
-          {children}
-        </a>
+      <Link
+        href={href}
+        className={`hover:text-red-700 ${className}`}
+        itemProp="url"
+      >
+        {children}
       </Link>
     );
   }

@@ -8,11 +8,9 @@ const SiteTitle = () => {
   return (
     <>
       <div className="mx-0">
-        <Link href="/">
-          <a className="flex font-medium content-center">
-            <TitleIcon />
-            <TitleLabel>{SITE_NAME}</TitleLabel>
-          </a>
+        <Link href="/" className="flex font-medium content-center">
+          <TitleIcon />
+          <TitleLabel>{SITE_NAME}</TitleLabel>
         </Link>
       </div>
     </>
