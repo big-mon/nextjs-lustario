@@ -11,7 +11,7 @@ type Props = {
 const ArticleImage = ({ title, src = "", alt = "" }: Props) => {
   return (
     <figure className="my-8 relative">
-      <Zoom zoomMargin={100} overlayBgColorEnd={"rgba(255, 255, 255, 0.85)"}>
+      <Zoom zoomMargin={100}>
         <Image src={src} alt={alt} layout="fill" objectFit="contain" />
       </Zoom>
       {title ? (
