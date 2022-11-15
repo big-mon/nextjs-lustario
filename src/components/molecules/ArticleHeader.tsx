@@ -1,7 +1,7 @@
 import type { PostMeta } from "models/Post";
 import Image from "next/image";
 import { convertInnerUrl } from "utils/url";
-import ArticleCategory from "components/molecules/ArticleCategory";
+import ArticleCategory from "components/post/CategoryText";
 import ArticleTitle from "components/molecules/ArticleTitle";
 import ArticleDate from "components/molecules/ArticleDate";
 

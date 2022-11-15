@@ -1,5 +1,5 @@
 import type { PostMeta } from "models/Post";
-import ArticleCategory from "components/molecules/ArticleCategory";
+import ArticleCategory from "components/post/CategoryText";
 import ArticleTitle from "components/molecules/ArticleTitle";
 import ArticleDescription from "components/molecules/ArticleDescription";
 import ArticleDate from "components/molecules/ArticleDate";
