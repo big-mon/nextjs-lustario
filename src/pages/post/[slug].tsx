@@ -1,7 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostData } from "models/Post";
-import { getAllPostSlugs } from "repositories/local/markdown/slug";
-import { getPostDataBySlug } from "services/getSinglePost";
+import { getPost, getAllPostSlugs } from "services/accessToPost";
 import Template from "components/template/Post";
 import SEO from "components/organisms/SEO";
 
@@ -32,7 +31,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 /** ビルド時のみの静的ページ生成 */
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostDataBySlug(params?.slug as string);
+  const slug = params?.slug as string;
+  const postData = await getPost(slug);
   return { props: { postData } };
 };
 
