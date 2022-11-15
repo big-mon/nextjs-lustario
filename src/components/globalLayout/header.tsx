@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "../../../public/favicon.svg";
 import { SITE_NAME } from "constants/information";
-import TitleIcon from "components/atoms/TitleIcon";
-import TitleLabel from "components/atoms/TitleLabel";
 import CustomLink from "components/common/CustomLink";
 
 /** 全体ヘッダー */
@@ -16,8 +16,10 @@ const GlobalHeader = () => {
         {/* サイトタイトル */}
         <div className="mx-0">
           <Link href="/" className="flex font-medium content-center">
-            <TitleIcon />
-            <TitleLabel>{SITE_NAME}</TitleLabel>
+            <Image src={Logo} alt={SITE_NAME} width={24} height={24} />
+            <span className="ml-2 text-xl" itemProp="name about">
+              {SITE_NAME}
+            </span>
           </Link>
         </div>
 
