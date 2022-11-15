@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SITE_NAME } from "constants/information";
 import TitleIcon from "components/atoms/TitleIcon";
 import TitleLabel from "components/atoms/TitleLabel";
-import CustomLink from "components/atoms/CustomLink";
+import CustomLink from "components/common/CustomLink";
 
 /** 全体ヘッダー */
 const GlobalHeader = () => {

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import CustomLink from "components/atoms/CustomLink";
+import CustomLink from "components/common/CustomLink";
 
 type Props = {
   children: ReactNode;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CustomLink from "components/atoms/CustomLink";
+import CustomLink from "components/common/CustomLink";
 
 type Props = {
   src: string;

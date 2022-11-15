@@ -1,5 +1,5 @@
 import { PER_PAGE } from "constants/setting";
-import CustomLink from "components/atoms/CustomLink";
+import CustomLink from "components/common/CustomLink";
 import Button from "components/common/Button";
 
 type Props = {
