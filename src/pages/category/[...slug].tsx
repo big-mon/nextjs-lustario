@@ -1,7 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
-import { getSortedPostsMeta } from "repositories/local/markdown/post";
-import { PER_PAGE } from "constants/setting";
+import { getPosts, getAllPaths } from "services/accessToCategory";
 import Template from "components/template/Index";
 import SEO from "components/organisms/SEO";
 
@@ -29,19 +28,7 @@ const Page = ({ posts, total, current, category }: Props) => {
 
 /** 動的なルーティング対象の一覧を定義 */
 export const getStaticPaths: GetStaticPaths = async () => {
-  const allMeta = getSortedPostsMeta();
-  const categories = Array.from(new Set(allMeta.map((meta) => meta.category)));
-  const paths = categories.flatMap((cat) => {
-    // 指定カテゴリーのページ数を計算
-    const postCount = allMeta.filter((meta) => meta.category == cat).length;
-    const pageCount = Math.ceil(postCount / PER_PAGE);
-
-    let childParams = [];
-    for (let i = 1; i <= pageCount; i++) {
-      childParams.push([cat.toLowerCase(), i.toString()]);
-    }
-    return childParams;
-  });
+  const paths = getAllPaths();
 
   return {
     paths: paths.map((path) => ({
@@ -58,15 +45,12 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
   const page = Number(slug[1]) ?? 1;
 
   // カテゴリーとページに該当する記事に絞り込み
-  const allPosts = getSortedPostsMeta().filter(
-    (meta) => meta.category.toLowerCase() == category
-  );
-  const posts = allPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  const posts = getPosts(category, page);
 
   return {
     props: {
-      posts: posts,
-      total: allPosts.length,
+      posts: posts.posts,
+      total: posts.total,
       current: page,
       category: category,
     },
