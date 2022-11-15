@@ -3,7 +3,7 @@ import Image from "next/image";
 import { convertInnerUrl } from "utils/url";
 import ArticleCategory from "components/post/categoryText";
 import ArticleDate from "components/post/dateText";
-import CustomLink from "components/common/CustomLink";
+import CustomLink from "components/common/customLink";
 
 type Props = {
   data: PostMeta;

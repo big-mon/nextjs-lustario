@@ -1,4 +1,4 @@
-import Date from "components/common/Date";
+import Date from "components/common/dateText";
 
 type Props = {
   date: string;

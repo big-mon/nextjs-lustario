@@ -1,8 +1,8 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostData } from "models/Post";
 import { getPost, getAllPostSlugs } from "services/accessToPost";
-import Template from "components/template/Post";
-import SEO from "components/common/SEO";
+import Template from "components/template/post";
+import SEO from "components/common/seo";
 
 type Props = {
   postData: PostData;

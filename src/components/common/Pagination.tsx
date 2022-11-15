@@ -1,6 +1,6 @@
 import { PER_PAGE } from "constants/setting";
-import CustomLink from "components/common/CustomLink";
-import Button from "components/common/Button";
+import CustomLink from "components/common/customLink";
+import Button from "components/common/button";
 
 type Props = {
   total: number;

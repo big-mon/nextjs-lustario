@@ -2,7 +2,7 @@ import type { PostMeta } from "models/Post";
 import ArticleCategory from "components/post/categoryText";
 import ArticleDate from "components/post/dateText";
 import CoverImage from "components/post/card/coverImage";
-import CustomLink from "components/common/CustomLink";
+import CustomLink from "components/common/customLink";
 
 type Props = {
   data: PostMeta;

@@ -1,5 +1,5 @@
 import type { PostData } from "models/Post";
-import CustomLink from "components/common/CustomLink";
+import CustomLink from "components/common/customLink";
 import Header from "components/post/detail/header";
 import Body from "components/post/detail/body";
 

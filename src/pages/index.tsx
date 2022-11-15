@@ -1,8 +1,8 @@
 import type { GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
 import { getPosts } from "services/accessToTop";
-import Template from "components/template/Index";
-import SEO from "components/common/SEO";
+import Template from "components/template";
+import SEO from "components/common/seo";
 
 type Props = {
   posts: PostMeta[];

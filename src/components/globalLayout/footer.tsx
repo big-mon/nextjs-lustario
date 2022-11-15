@@ -1,6 +1,6 @@
 import { SITE_NAME } from "constants/information";
 import { TWITTER, GITHUB } from "constants/owner";
-import CustomLink from "components/common/CustomLink";
+import CustomLink from "components/common/customLink";
 
 /** 全体フッター */
 const GlobalFooter = () => {

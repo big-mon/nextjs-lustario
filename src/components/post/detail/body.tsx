@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
-import CustomLink from "components/common/CustomLink";
+import CustomLink from "components/common/customLink";
 import Image from "components/post/detail/image";
 import CodeBlock from "components/post/detail/codeBlock";
 

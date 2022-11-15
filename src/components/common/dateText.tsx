@@ -5,7 +5,7 @@ type Props = {
 };
 
 /** 日付データ表記 */
-const Date = ({ dateString }: Props) => {
+const DateText = ({ dateString }: Props) => {
   const date: Date = parseISO(dateString);
   const text: string = format(date, "yyyy-MM-dd");
 
@@ -16,4 +16,4 @@ const Date = ({ dateString }: Props) => {
   );
 };
 
-export default Date;
+export default DateText;

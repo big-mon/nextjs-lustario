@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../public/favicon.svg";
 import { SITE_NAME } from "constants/information";
-import CustomLink from "components/common/CustomLink";
+import CustomLink from "components/common/customLink";
 
 /** 全体ヘッダー */
 const GlobalHeader = () => {
