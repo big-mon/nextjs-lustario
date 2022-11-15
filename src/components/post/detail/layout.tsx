@@ -12,8 +12,11 @@ const ArticleDetail = ({ data }: Props) => {
   return (
     <>
       <article itemProp="mainEntityOfPage">
+        {/* ヘッダー */}
         <ArticleHeader data={data.meta} />
+        {/* 本文 */}
         <ArticleBody content={data.content} />
+        {/* タグ一覧 */}
         <ArticleTags tags={data.meta.tags} />
       </article>
     </>
