@@ -6,8 +6,8 @@ import remarkBreaks from "remark-breaks";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
 import CustomLink from "components/common/CustomLink";
-import ArticleImage from "components/molecules/ArticleImage";
-import CodeBlock from "components/molecules/CodeBlock";
+import ArticleImage from "components/post/detail/ArticleImage";
+import CodeBlock from "components/post/detail/CodeBlock";
 
 type Props = {
   content: string;

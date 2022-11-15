@@ -2,8 +2,8 @@ import type { PostMeta } from "models/Post";
 import Image from "next/image";
 import { convertInnerUrl } from "utils/url";
 import ArticleCategory from "components/post/CategoryText";
-import ArticleTitle from "components/molecules/ArticleTitle";
-import ArticleDate from "components/molecules/ArticleDate";
+import ArticleTitle from "components/post/card/ArticleTitle";
+import ArticleDate from "components/post/card/ArticleDate";
 
 type Props = {
   data: PostMeta;

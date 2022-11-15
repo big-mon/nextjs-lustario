@@ -1,7 +1,7 @@
 import type { PostData } from "models/Post";
-import ArticleHeader from "components/molecules/ArticleHeader";
-import ArticleBody from "components/molecules/ArticleBody";
-import ArticleTags from "components/molecules/ArticleTags";
+import ArticleHeader from "components/post/detail/ArticleHeader";
+import ArticleBody from "components/post/detail/ArticleBody";
+import ArticleTags from "components/post/detail/ArticleTags";
 
 type Props = {
   data: PostData;

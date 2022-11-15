@@ -1,9 +1,9 @@
 import type { PostMeta } from "models/Post";
 import ArticleCategory from "components/post/CategoryText";
-import ArticleTitle from "components/molecules/ArticleTitle";
-import ArticleDescription from "components/molecules/ArticleDescription";
-import ArticleDate from "components/molecules/ArticleDate";
-import ArticleCoverImage from "components/molecules/ArticleCoverImage";
+import ArticleTitle from "components/post/card/ArticleTitle";
+import ArticleDescription from "components/post/card/ArticleDescription";
+import ArticleDate from "components/post/card/ArticleDate";
+import ArticleCoverImage from "components/post/card/ArticleCoverImage";
 
 type Props = {
   data: PostMeta;
