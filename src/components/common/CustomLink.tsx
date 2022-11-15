@@ -11,13 +11,11 @@ const CustomLink = ({ href = "/", children = "", className = "" }: Props) => {
   const isInternal = href && href.startsWith("/");
   const isAnchor = href && href.startsWith("#");
 
+  const classes = `hover:text-red-700 ${className}`;
+
   if (isInternal) {
     return (
-      <Link
-        href={href}
-        className={`hover:text-red-700 ${className}`}
-        itemProp="url"
-      >
+      <Link href={href} className={classes} itemProp="url">
         {children}
       </Link>
     );
@@ -25,11 +23,7 @@ const CustomLink = ({ href = "/", children = "", className = "" }: Props) => {
 
   if (isAnchor) {
     return (
-      <a
-        className={`hover:text-red-700 ${className}`}
-        href={href}
-        itemProp="url"
-      >
+      <a className={classes} href={href} itemProp="url">
         {children}
       </a>
     );
@@ -37,7 +31,7 @@ const CustomLink = ({ href = "/", children = "", className = "" }: Props) => {
 
   return (
     <a
-      className={`hover:text-red-700 ${className}`}
+      className={classes}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
