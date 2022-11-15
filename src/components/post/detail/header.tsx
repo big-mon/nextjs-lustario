@@ -17,9 +17,9 @@ const Header = ({ data }: Props) => {
         <Image
           src={convertInnerUrl(data.coverImage)}
           alt={data.title}
-          layout="fill"
-          objectFit="cover"
           className="pointer-events-none"
+          style={{ objectFit: "cover" }}
+          fill
         />
 
         <div className="absolute bottom-6 max-w-4xl w-full mx-auto p-6 left-1/2 transform -translate-x-2/4 rounded backdrop-filter backdrop-blur-sm bg-black bg-opacity-20 text-gray-200">

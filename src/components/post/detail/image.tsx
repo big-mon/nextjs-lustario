@@ -12,7 +12,7 @@ const ArticleImage = ({ title, src = "", alt = "" }: Props) => {
   return (
     <figure className="my-8 relative">
       <Zoom zoomMargin={100}>
-        <Image src={src} alt={alt} layout="fill" objectFit="contain" />
+        <Image src={src} alt={alt} fill />
       </Zoom>
       {title ? (
         <figcaption className="p-2 text-center text-base">{title}</figcaption>

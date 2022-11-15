@@ -17,11 +17,10 @@ const CoverImage = ({ src, alt, slug }: Props) => {
       <Image
         src={fixSrc}
         alt={alt}
-        layout="fill"
-        objectFit="cover"
         quality={60}
         itemProp="image"
         className="transform duration-500 group-hover:scale-105"
+        fill
       />
     </CustomLink>
   );
