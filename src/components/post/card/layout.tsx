@@ -1,6 +1,5 @@
 import type { PostMeta } from "models/Post";
 import ArticleCategory from "components/post/CategoryText";
-import ArticleDescription from "components/post/card/ArticleDescription";
 import ArticleDate from "components/post/DateText";
 import ArticleCoverImage from "components/post/card/ArticleCoverImage";
 import CustomLink from "components/common/CustomLink";
@@ -21,10 +20,18 @@ const ArticleCard = ({ data }: Props) => {
           <CustomLink href={`/post/${data.slug}`}>{data.title}</CustomLink>
         </h1>
 
-        <ArticleDescription>{data.description}</ArticleDescription>
+        {/* 概要 */}
+        <p
+          className="text-base mb-6 h-24 hidden md:block overflow-hidden"
+          itemProp="description"
+        >
+          {data.description}
+        </p>
+
         <ArticleDate date={data.date} />
       </div>
       <div className="relative flex-grow-0 w-full md:w-55/100 h-56 md:h-72 overflow-hidden">
+        {/* サムネイル */}
         <ArticleCoverImage
           src={data.coverImage}
           alt={data.title}
