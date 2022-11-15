@@ -2,8 +2,8 @@ import type { PostMeta } from "models/Post";
 import Image from "next/image";
 import { convertInnerUrl } from "utils/url";
 import ArticleCategory from "components/post/CategoryText";
-import ArticleTitle from "components/post/card/ArticleTitle";
-import ArticleDate from "components/post/card/ArticleDate";
+import ArticleDate from "components/post/DateText";
+import CustomLink from "components/common/CustomLink";
 
 type Props = {
   data: PostMeta;
@@ -24,9 +24,12 @@ const ArticleHeader = ({ data }: Props) => {
 
         <div className="absolute bottom-6 max-w-4xl w-full mx-auto p-6 left-1/2 transform -translate-x-2/4 rounded backdrop-filter backdrop-blur-sm bg-black bg-opacity-20 text-gray-200">
           <ArticleCategory>{data.category}</ArticleCategory>
-          <ArticleTitle slug={data.slug} isLarge={true}>
-            {data.title}
-          </ArticleTitle>
+
+          {/* タイトル */}
+          <h1 className="text-4xl my-4" itemProp="headline name">
+            <CustomLink href={`/post/${data.slug}`}>{data.title}</CustomLink>
+          </h1>
+
           <ArticleDate date={data.date} />
         </div>
       </div>
