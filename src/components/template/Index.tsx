@@ -1,6 +1,6 @@
 import type { PostMeta } from "models/Post";
 import ArticleCard from "components/organisms/ArticleCard";
-import Pagination from "components/organisms/Pagination";
+import Pagination from "components/common/Pagination";
 
 type Props = {
   posts: PostMeta[];

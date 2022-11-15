@@ -1,5 +1,6 @@
 import { PER_PAGE } from "constants/setting";
-import PageButton from "components/molecules/PageButton";
+import CustomLink from "components/atoms/CustomLink";
+import Button from "components/atoms/Button";
 
 type Props = {
   total: number;
@@ -16,12 +17,16 @@ const Pagination = ({ total, current, mode = "page" }: Props) => {
   return (
     <div className="text-right">
       {hasPrev ? (
-        <PageButton src={`/${mode}/${Number(current) - 1}`} text={"<"} />
+        <CustomLink href={`/${mode}/${Number(current) - 1}`}>
+          <Button>{"<"}</Button>
+        </CustomLink>
       ) : (
         <></>
       )}
       {hasNext ? (
-        <PageButton src={`/${mode}/${Number(current) + 1}`} text={">"} />
+        <CustomLink href={`/${mode}/${Number(current) + 1}`}>
+          <Button>{">"}</Button>
+        </CustomLink>
       ) : (
         <></>
       )}
