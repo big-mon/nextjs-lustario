@@ -1,8 +1,8 @@
 import "tailwindcss/tailwind.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import GlobalHeader from "components/common/GlobalHeader";
-import GlobalFooter from "components/common/GlobalFooter";
+import GlobalHeader from "components/globalLayout/header";
+import GlobalFooter from "components/globalLayout/footer";
 import NextProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
