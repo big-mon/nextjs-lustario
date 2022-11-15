@@ -14,7 +14,7 @@ export const getPosts = (tag: string, page: number) => {
 
   return {
     posts: currentPagePosts,
-    total: allPosts.length,
+    totalPage: allPosts.length,
   };
 };
 

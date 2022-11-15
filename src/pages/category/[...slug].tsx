@@ -6,19 +6,19 @@ import SEO from "components/organisms/SEO";
 
 type Props = {
   posts: PostMeta[];
-  total: number;
+  totalPage: number;
   current: number;
   category: string;
 };
 
 /** ページ本体 */
-const Page = ({ posts, total, current, category }: Props) => {
+const Page = ({ posts, totalPage, current, category }: Props) => {
   return (
     <>
       <SEO category={category} />
       <Template
         posts={posts}
-        total={total}
+        total={totalPage}
         current={current}
         mode={`category/${category}`}
       />
@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
   return {
     props: {
       posts: posts.posts,
-      total: posts.total,
+      totalPage: posts.totalPage,
       current: page,
       category: category,
     },

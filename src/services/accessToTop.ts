@@ -8,6 +8,6 @@ export const getPosts = () => {
 
   return {
     posts: posts,
-    total: allPosts.length,
+    totalPage: allPosts.length,
   };
 };

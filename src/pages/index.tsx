@@ -6,15 +6,15 @@ import SEO from "components/organisms/SEO";
 
 type Props = {
   posts: PostMeta[];
-  total: number;
+  totalPage: number;
 };
 
 /** ページ本体 */
-const Page = ({ posts, total }: Props) => {
+const Page = ({ posts, totalPage }: Props) => {
   return (
     <>
       <SEO />
-      <Template posts={posts} total={total} current={1} mode={"page"} />
+      <Template posts={posts} total={totalPage} current={1} mode={"page"} />
     </>
   );
 };
