@@ -1,5 +1,5 @@
 import { getPostDataBySlug } from "services/getSinglePost";
-import { getSortedPostsMeta } from "repositories/local/markdown/post";
+import { getSortedPostsMeta } from "repositories/local/post";
 
 /** 記事詳細ページ向けの記事データを取得 */
 export const getPost = async (slug: string) => {

@@ -1,5 +1,5 @@
 import { PER_PAGE } from "constants/setting";
-import { getSortedPostsMeta } from "repositories/local/markdown/post";
+import { getSortedPostsMeta } from "repositories/local/post";
 
 /** トップページ(ページ指定あり)向けの記事一覧と全ページ数を取得 */
 export const getPosts = (page: number) => {
