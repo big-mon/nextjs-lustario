@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
-  swcMinify: true,
   experimental: {
     appDir: true,
   },
