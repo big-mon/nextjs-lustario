@@ -1,13 +1,8 @@
 import type { PostMeta } from "models/Post";
 import Head from "next/head";
-import {
-  SITE_NAME,
-  SITE_DESCRIPTION,
-  SITE_ROOT,
-  SITE_IMAGE,
-  TWITTER,
-  OWNER,
-} from "lib/constants";
+import { SITE_NAME, SITE_DESCRIPTION, SITE_ROOT } from "constants/information";
+import { SITE_IMAGE } from "constants/setting";
+import { OWNER, TWITTER } from "constants/owner";
 
 type Props = {
   meta?: PostMeta;

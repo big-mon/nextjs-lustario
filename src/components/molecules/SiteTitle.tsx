@@ -1,6 +1,6 @@
 import TitleIcon from "components/atoms/TitleIcon";
 import TitleLabel from "components/atoms/TitleLabel";
-import { SITE_NAME } from "lib/constants";
+import { SITE_NAME } from "constants/information";
 import Link from "next/link";
 
 /** 全体ヘッダー用サイト名 */

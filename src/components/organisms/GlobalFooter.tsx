@@ -2,7 +2,7 @@ import CopyRight from "components/atoms/CopyRight";
 import SocialIconTwitter from "components/atoms/SocialIconTwitter";
 import SocialIconGitHub from "components/atoms/SocialIconGitHub";
 import CustomLink from "components/atoms/CustomLink";
-import { TWITTER, GITHUB } from "lib/constants";
+import { TWITTER, GITHUB } from "constants/owner";
 
 /** 全体フッター */
 const GlobalFooter = () => {

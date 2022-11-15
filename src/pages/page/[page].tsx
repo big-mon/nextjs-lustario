@@ -3,7 +3,7 @@ import type { PostMeta } from "models/Post";
 import Template from "components/template/Index";
 import SEO from "components/organisms/SEO";
 import { getSortedPostsMeta } from "lib/posts";
-import { PER_PAGE } from "lib/constants";
+import { PER_PAGE } from "constants/setting";
 
 type Props = {
   posts: PostMeta[];

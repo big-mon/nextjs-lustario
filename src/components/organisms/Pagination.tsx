@@ -1,4 +1,4 @@
-import { PER_PAGE } from "lib/constants";
+import { PER_PAGE } from "constants/setting";
 import PageButton from "components/molecules/PageButton";
 
 type Props = {

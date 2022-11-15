@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Logo from "../../../public/favicon.svg";
-import { SITE_NAME } from "lib/constants";
+import { SITE_NAME } from "constants/information";
 
 /** 全体ヘッダー用アイコン */
 const TitleIcon = () => {

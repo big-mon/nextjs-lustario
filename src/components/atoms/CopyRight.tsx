@@ -1,5 +1,5 @@
 import CustomLink from "components/atoms/CustomLink";
-import { SITE_NAME } from "lib/constants";
+import { SITE_NAME } from "constants/information";
 
 const CopyRight = () => {
   return (
