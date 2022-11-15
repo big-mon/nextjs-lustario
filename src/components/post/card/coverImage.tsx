@@ -8,7 +8,7 @@ type Props = {
 };
 
 /** 記事カバー画像 */
-const ArticleCoverImage = ({ src, alt, slug }: Props) => {
+const CoverImage = ({ src, alt, slug }: Props) => {
   const isInternal = src && !src.startsWith("http") && !src.startsWith("/");
   const fixSrc = isInternal ? `/${src}` : src;
 
@@ -27,4 +27,4 @@ const ArticleCoverImage = ({ src, alt, slug }: Props) => {
   );
 };
 
-export default ArticleCoverImage;
+export default CoverImage;

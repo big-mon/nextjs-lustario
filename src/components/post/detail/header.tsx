@@ -1,15 +1,15 @@
 import type { PostMeta } from "models/Post";
 import Image from "next/image";
 import { convertInnerUrl } from "utils/url";
-import ArticleCategory from "components/post/CategoryText";
-import ArticleDate from "components/post/DateText";
+import ArticleCategory from "components/post/categoryText";
+import ArticleDate from "components/post/dateText";
 import CustomLink from "components/common/CustomLink";
 
 type Props = {
   data: PostMeta;
 };
 
-const ArticleHeader = ({ data }: Props) => {
+const Header = ({ data }: Props) => {
   return (
     <>
       <div className="mx-screen relative h-104 mb-16">
@@ -37,4 +37,4 @@ const ArticleHeader = ({ data }: Props) => {
   );
 };
 
-export default ArticleHeader;
+export default Header;

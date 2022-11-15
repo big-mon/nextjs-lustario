@@ -1,7 +1,7 @@
 import type { PostMeta } from "models/Post";
-import ArticleCategory from "components/post/CategoryText";
-import ArticleDate from "components/post/DateText";
-import ArticleCoverImage from "components/post/card/ArticleCoverImage";
+import ArticleCategory from "components/post/categoryText";
+import ArticleDate from "components/post/dateText";
+import CoverImage from "components/post/card/coverImage";
 import CustomLink from "components/common/CustomLink";
 
 type Props = {
@@ -32,11 +32,7 @@ const ArticleCard = ({ data }: Props) => {
       </div>
       <div className="relative flex-grow-0 w-full md:w-55/100 h-56 md:h-72 overflow-hidden">
         {/* サムネイル */}
-        <ArticleCoverImage
-          src={data.coverImage}
-          alt={data.title}
-          slug={data.slug}
-        />
+        <CoverImage src={data.coverImage} alt={data.title} slug={data.slug} />
       </div>
     </article>
   );

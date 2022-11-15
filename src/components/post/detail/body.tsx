@@ -6,15 +6,15 @@ import remarkBreaks from "remark-breaks";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
 import CustomLink from "components/common/CustomLink";
-import ArticleImage from "components/post/detail/ArticleImage";
-import CodeBlock from "components/post/detail/CodeBlock";
+import Image from "components/post/detail/image";
+import CodeBlock from "components/post/detail/codeBlock";
 
 type Props = {
   content: string;
 };
 
 /** 記事本文 */
-const ArticleBody = ({ content }: Props) => {
+const Body = ({ content }: Props) => {
   const convertResult = (
     <ReactMarkdown
       className="max-w-2xl mx-auto text-lg leading-loose"
@@ -27,7 +27,7 @@ const ArticleBody = ({ content }: Props) => {
         h4: "h5",
         h5: "h6",
         a: CustomLink,
-        img: ArticleImage,
+        img: Image,
         code: CodeBlock,
       }}
     >
@@ -42,4 +42,4 @@ const ArticleBody = ({ content }: Props) => {
   );
 };
 
-export default ArticleBody;
+export default Body;
