@@ -1,7 +1,6 @@
 import type { GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
-import { getSortedPostsMeta } from "repositories/local/markdown/post";
-import { PER_PAGE } from "constants/setting";
+import { getPosts } from "services/accessToTop";
 import Template from "components/template/Index";
 import SEO from "components/organisms/SEO";
 
@@ -22,11 +21,8 @@ const Page = ({ posts, total }: Props) => {
 
 /** ビルド時のみの静的ページ生成 */
 export const getStaticProps: GetStaticProps = () => {
-  const allPosts = getSortedPostsMeta();
-  const posts = allPosts.slice(0, PER_PAGE);
-
   return {
-    props: { posts: posts, total: allPosts.length },
+    props: getPosts(),
   };
 };
 
