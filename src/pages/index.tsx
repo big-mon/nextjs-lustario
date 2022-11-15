@@ -1,6 +1,6 @@
 import type { GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
-import { getSortedPostsMeta } from "lib/posts";
+import { getSortedPostsMeta } from "repositories/local/markdown/post";
 import { PER_PAGE } from "constants/setting";
 import Template from "components/template/Index";
 import SEO from "components/organisms/SEO";

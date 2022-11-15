@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostData } from "models/Post";
-import { getAllPostSlugs, getPostDataBySlug } from "lib/posts";
+import { getAllPostSlugs } from "repositories/local/markdown/slug";
+import { getPostDataBySlug } from "services/getSinglePost";
 import Template from "components/template/Post";
 import SEO from "components/organisms/SEO";
 
