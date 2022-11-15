@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { convertInnerUrl } from "lib/url";
+import { convertInnerUrl } from "utils/url";
 
 type Props = {
   src: string;
