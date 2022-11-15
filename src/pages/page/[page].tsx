@@ -2,31 +2,31 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
 import Template from "components/template/Index";
 import SEO from "components/organisms/SEO";
-import { getSortedPostsMeta } from "repositories/local/markdown/post";
-import { PER_PAGE } from "constants/setting";
+import { getPosts, getAllPaths } from "services/accessToPage";
 
 type Props = {
   posts: PostMeta[];
-  total: number;
+  totalPage: number;
   current: number;
 };
 
-const Page = ({ posts, total, current }: Props) => {
+const Page = ({ posts, totalPage, current }: Props) => {
   return (
     <>
       <SEO />
-      <Template posts={posts} total={total} current={current} mode={"page"} />
+      <Template
+        posts={posts}
+        total={totalPage}
+        current={current}
+        mode={"page"}
+      />
     </>
   );
 };
 
 /** 動的なルーティング対象の一覧を定義 */
 export const getStaticPaths: GetStaticPaths = () => {
-  const posts = getSortedPostsMeta();
-
-  const range = (start: number, end: number) =>
-    [...Array(end - start + 1)].map((_, i) => start + i);
-  const pages = range(1, Math.ceil(posts.length / PER_PAGE));
+  const pages = getAllPaths();
 
   return {
     paths: pages.map((p) => ({
@@ -38,12 +38,15 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 /** ビルド時の静的生成 */
 export const getStaticProps: GetStaticProps = ({ params }) => {
-  const allPosts = getSortedPostsMeta();
   const page = Number(params?.page as string);
-  const posts = allPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  const posts = getPosts(page);
 
   return {
-    props: { posts, total: allPosts.length, current: page },
+    props: {
+      posts,
+      totalPage: posts.totalPage,
+      current: page,
+    },
   };
 };
 
