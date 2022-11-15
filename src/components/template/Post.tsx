@@ -1,5 +1,5 @@
 import type { PostData } from "models/Post";
-import ArticleDetail from "components/post/detail/Detail";
+import ArticleDetail from "components/post/detail/layout";
 
 type Props = {
   post: PostData;
