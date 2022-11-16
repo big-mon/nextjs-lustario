@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
 
   return {
     props: {
-      posts,
+      posts: posts.posts,
       totalPage: posts.totalPage,
       current: page,
     },
