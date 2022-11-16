@@ -5,7 +5,7 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   experimental: {
-    appDir: true,
+    appDir: false,
   },
 };
 module.exports = nextConfig;
