@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../public/favicon.svg";
 import { SITE_NAME } from "constants/information";
@@ -6,6 +5,7 @@ import CustomLink from "components/common/customLink";
 
 /** 全体ヘッダー */
 const GlobalHeader = () => {
+  const imageStyle = { width: "2ch", height: "auto" };
   return (
     <>
       <header
@@ -15,12 +15,12 @@ const GlobalHeader = () => {
       >
         {/* サイトタイトル */}
         <div className="mx-0">
-          <Link href="/" className="flex font-medium content-center">
-            <Image src={Logo} alt={SITE_NAME} width={24} height={24} />
+          <CustomLink href="/" className="flex font-medium content-center">
+            <Image src={Logo} alt={SITE_NAME} style={imageStyle} />
             <span className="ml-2 text-xl" itemProp="name about">
               {SITE_NAME}
             </span>
-          </Link>
+          </CustomLink>
         </div>
 
         {/* サイトメニュー */}
