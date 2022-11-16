@@ -1,6 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
-import Template from "components/template";
+import Template from "components/template/index";
 import SEO from "components/common/seo";
 import { getPosts, getAllPaths } from "services/accessToPage";
 

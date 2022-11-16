@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { PostMeta } from "models/Post";
 import { getPosts, getAllPaths } from "services/accessToCategory";
-import Template from "components/template";
+import Template from "components/template/index";
 import SEO from "components/common/seo";
 
 type Props = {
