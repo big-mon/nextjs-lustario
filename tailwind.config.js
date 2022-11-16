@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", ...fontFamily.serif],
+        sans: ["var(--font-noto-serif)", ...fontFamily.serif],
       },
       width: {
         "45/100": "45%",
