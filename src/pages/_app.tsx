@@ -9,7 +9,6 @@ import NextProgress from "nextjs-progressbar";
 const notoSerif = Noto_Serif_JP({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-noto-serif",
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -19,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
-      <div className={`${notoSerif.variable} font-serif`}>
+      <div className={`${notoSerif.className} font-serif`}>
         <NextProgress color="rgb(185, 28, 28)" stopDelayMs={100} height={2} />
 
         <GlobalHeader />
