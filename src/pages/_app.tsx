@@ -8,7 +8,7 @@ import NextProgress from "nextjs-progressbar";
 
 const notoSerif = Noto_Serif_JP({
   weight: "400",
-  subsets: ["japanese"],
+  subsets: ["latin"],
   variable: "--font-noto-serif",
 });
 
