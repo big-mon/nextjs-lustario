@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
-      <div className={`${notoSerif.className} font-serif`}>
+      <div className={`${notoSerif.className}`}>
         <NextProgress color="rgb(185, 28, 28)" stopDelayMs={100} height={2} />
 
         <GlobalHeader />
