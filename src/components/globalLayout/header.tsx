@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../../public/favicon.svg";
+import Logo from "@public/favicon.svg";
 import { SITE_NAME } from "constants/information";
 import CustomLink from "components/common/customLink";
 
