@@ -56,7 +56,7 @@ const SEO = ({ meta, category, tag }: Props) => {
   );
 };
 
-const coverImageConvert = (src) => {
+const coverImageConvert = (src: string) => {
   const isInternal = src && !src.startsWith("http") && !src.startsWith("/");
   const fixSrc = isInternal ? `/${src}` : src;
   return fixSrc;
