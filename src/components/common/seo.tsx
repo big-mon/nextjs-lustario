@@ -16,7 +16,7 @@ const SEO = ({ meta, category, tag }: Props) => {
     : `${SITE_NAME} | ${SITE_DESCRIPTION}`;
   const description = meta ? meta.description ?? "" : SITE_DESCRIPTION;
   const ogpType = meta ? "website" : "article";
-  const image = meta ? meta.coverImage : SITE_IMAGE;
+  const image = meta ? coverImageConvert(meta.coverImage) : SITE_IMAGE;
   const url =
     SITE_ROOT +
     (meta
@@ -54,6 +54,12 @@ const SEO = ({ meta, category, tag }: Props) => {
       <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     </Head>
   );
+};
+
+const coverImageConvert = (src) => {
+  const isInternal = src && !src.startsWith("http") && !src.startsWith("/");
+  const fixSrc = isInternal ? `/${src}` : src;
+  return fixSrc;
 };
 
 export default SEO;
